@@ -7,6 +7,7 @@
 
 const HANDLE_MATCH = (req, res, next) => {
   console.log(req.body);
+  res.send({ msg: "This is your match, congrats!" });
 };
 
 module.exports = HANDLE_MATCH;

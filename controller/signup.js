@@ -27,7 +27,7 @@
 
 const HANDLE_SIGNUP = (req, res, next) => {
   console.log(req.body);
-  res.send({ msg: "Successfully created user in DB" });
+  res.send({ msg: "You've been added to the DB!" });
 };
 
 module.exports = HANDLE_SIGNUP;

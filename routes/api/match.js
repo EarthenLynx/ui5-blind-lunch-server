@@ -1,11 +1,11 @@
 const express = require("express");
-const cMatch = require("../../controller/match");
+const HANDLE_MATCH = require("../../controller/match");
 
 // Setup the router
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  cMatch(req, res);
+router.get("/", (req, res, next) => {
+  HANDLE_MATCH(req, res, next);
 });
 
 module.exports = router;
