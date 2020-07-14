@@ -12,6 +12,15 @@ app.use(express.urlencoded({ extended: false }));
 const signupRoute = require("./routes/api/signup");
 const matchRoute = require("./routes/api/match");
 
+// Uncomment these to set the CORS headers
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "*");
+  res.setHeader("Access-Control-Allow-Headers", "*");
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  next();
+});
+
 // Register the routes in the application
 app.use("/signup", signupRoute);
 app.use("/match", matchRoute);

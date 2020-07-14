@@ -1,11 +1,11 @@
 const express = require("express");
-const cSignUp = require("../../controller/signup");
+const HANDLE_SIGNUP = require("../../controller/signup");
 
 // Setup the router
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  cSignUp(req, res);
+router.post("/", (req, res, next) => {
+  HANDLE_SIGNUP(req, res, next);
 });
 
 module.exports = router;
