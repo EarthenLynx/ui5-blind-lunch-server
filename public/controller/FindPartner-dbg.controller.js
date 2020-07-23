@@ -7,7 +7,7 @@ sap.ui.define(["./Basecontroller", "sap/ui/model/json/JSONModel"], function (
   return Basecontroller.extend("sap.ui.etc.blindlunch.controller.Basecontroller", {
     // GETTERS
     getLunchPartner() {
-      const host = this._getHostname(true);
+      const host = this._getHostname();
       const requestorDepartment = this.getView().getModel("lunchUser").getProperty("/department");
       const payload = { department: requestorDepartment };
       console.log(payload);

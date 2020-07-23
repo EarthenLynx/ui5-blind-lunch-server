@@ -6,7 +6,7 @@ sap.ui.define(["./Basecontroller"], function (Basecontroller) {
 
     // SETTERS
     onSignupUser(callback) {
-      const host = this._getHostname(true);
+      const host = this._getHostname();
       const payload = this.getView().getModel("lunchUser").getData();
 
       console.log(payload);
