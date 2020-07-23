@@ -16,7 +16,7 @@ sap.ui.define(
         if (dev) {
           return "http://localhost:3000";
         } else {
-          return "http://localhost";
+          return "";
         }
       },
 
