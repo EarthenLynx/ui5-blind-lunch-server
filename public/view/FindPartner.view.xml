@@ -1,0 +1,30 @@
+<mvc:View controllerName="sap.ui.etc.blindlunch.controller.FindPartner" displayBlock="true"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+	<l:BlockLayout background="Dashboard" class="ui-center-container">
+		<l:BlockLayoutRow accentCells="Accent1">
+			<l:BlockLayoutCell id="find-partner-form">
+				<VBox alignItems="Center" width="24em">
+					<Avatar backgroundColor="{lunchUserMatch>/color}" initials="{lunchUserMatch>/initials}" displaySize="XL" displayShape="Circle"/>
+					<Text class="ui-title" text="You're going to lunch with:" />
+					<Text class="ui-title" text="{lunchUserMatch>/name}" />
+					<Text class="ui-title" text="from {lunchUserMatch>/department}" />
+					<Text class="ui-subtitle" text="{lunchUserMatch>/mail}" />
+				</VBox>
+				<VBox alignItems="Center" width="24em">
+					<HBox>
+						<core:Icon src="sap-icon://message-information" class="sapUiTinyMarginEnd" press="handleShowDepartmentHelp" />
+						<Label text="My department" />
+					</HBox>
+
+					<Select id="find-partner-select" width="18rem" enabled="true" forceSelection="false" selectedKey="{lunchUser>/department}" items="{path: 'lunchUser>/departmentPool'}">
+						<core:ListItem key="{lunchUser>value}" text="{lunchUser>value}" />
+					</Select>
+					<Button id="find-partner-button" width="18rem" icon="sap-icon://visits" text="Find a colleague" press="handleGetLunchPartner" />
+				</VBox>
+			</l:BlockLayoutCell>
+		</l:BlockLayoutRow>
+	</l:BlockLayout>
+</mvc:View>

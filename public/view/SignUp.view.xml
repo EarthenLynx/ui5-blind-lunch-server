@@ -1,0 +1,27 @@
+<mvc:View controllerName="sap.ui.etc.blindlunch.controller.Signup" displayBlock="true" 
+	xmlns="sap.m" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:l="sap.ui.layout" 
+	xmlns:core="sap.ui.core">
+
+	<l:BlockLayout background="Dashboard" class="ui-center-container">
+		<l:BlockLayoutRow accentCells="Accent1">
+			<l:BlockLayoutCell title="Sign up" id="signup-form">
+				<VBox width="24em">
+					<Label width="100%" labelFor="lunch-user-name" text="Your name" />
+					<Input value="{lunchUser>/name}" placeholder="Name ..." id="lunch-user-name" />
+					<Label width="100%" labelFor="lunch-user-mail" text="Your mail adress" />
+					<Input value="{lunchUser>/mail}" placeholder="Email ..." id="lunch-user-mail" />
+					<Label width="100%" labelFor="lunch-user-department" text="Your department" />
+					<Select width="100%" enabled="true" id="type-input" forceSelection="false" selectedKey="{lunchUser>/department}" items="{path: 'lunchUser>/departmentPool'}">
+						<core:ListItem key="{lunchUser>value}" text="{lunchUser>value}" />
+					</Select>
+					<CheckBox text="I want to be found by other colleagues" selected="{lunchUser>/agreedToBeFound}" />
+					<CheckBox tooltip="Checking this box makes sure you'll only be matched with colleagues from other departments." text="Only other departments" selected="{lunchUser>/differentDepartmentOnly}" />
+					<CheckBox tooltip="Checking this box will delete your name only after 7 weekdays. You can of course always sign up again." text="Weekly signup" selected="{lunchUser>/weeklySignup}" />
+					<Button width="100%" icon="sap-icon://add-employee" text="Sign up" press="handleSignupUser"></Button>
+				</VBox>
+			</l:BlockLayoutCell>
+		</l:BlockLayoutRow>
+	</l:BlockLayout>
+</mvc:View>

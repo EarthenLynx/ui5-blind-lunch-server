@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/mvc/Controller","../model/formatter"],function(t,e){"use strict";return t.extend("sap.ui.etc.blindlunch.controller.App",{formatter:e,onInit:function(){}})});

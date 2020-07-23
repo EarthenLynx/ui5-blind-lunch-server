@@ -1,0 +1,16 @@
+<mvc:View controllerName="sap.ui.etc.blindlunch.controller.Home" displayBlock="true" 
+	xmlns="sap.m" 
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page id="page" title="Blind Lunch">
+		<IconTabBar stretchContentHeight="true" backgroundDesign="Transparent" id="idIconTabBarMulti" class="sapUiResponsiveContentPadding">
+			<items>
+				<IconTabFilter design="Vertical" icon="sap-icon://meal" text="Get connected" tooltip="Find a colleague to lunch with">
+					<mvc:XMLView viewName="sap.ui.etc.blindlunch.view.FindPartner" async="true" />
+				</IconTabFilter>
+				<IconTabFilter design="Vertical" icon="sap-icon://add-contact" text="Sign up" tooltip="Sign up to be found by other colleagues">
+					<mvc:XMLView viewName="sap.ui.etc.blindlunch.view.SignUp" async="true" />
+				</IconTabFilter>
+			</items>
+		</IconTabBar>
+	</Page>
+</mvc:View>

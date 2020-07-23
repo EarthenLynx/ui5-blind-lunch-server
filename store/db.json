@@ -1,3 +1,30 @@
 {
-  "partner": []
+  "partner": [
+    {
+      "name": "Test",
+      "mail": "Test@test.de",
+      "department": "Production",
+      "departmentPool": [
+        {
+          "id": 1,
+          "value": "Marketing"
+        },
+        {
+          "id": 2,
+          "value": "Production"
+        },
+        {
+          "id": 3,
+          "value": "CIT"
+        },
+        {
+          "id": 4,
+          "value": "Purchasing"
+        }
+      ],
+      "agreedToBeFound": false,
+      "differentDepartmentOnly": true,
+      "weeklySignup": false
+    }
+  ]
 }
