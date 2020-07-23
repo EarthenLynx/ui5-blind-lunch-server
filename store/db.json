@@ -1,9 +1,61 @@
 {
   "partner": [
     {
-      "name": "Jane",
-      "mail": "Donym",
-      "department": "Anonymous",
+      "name": "Jane only others",
+      "mail": "mail@mail.com",
+      "department": "Marketing",
+      "departmentPool": [
+        {
+          "id": 1,
+          "value": "Marketing"
+        },
+        {
+          "id": 2,
+          "value": "Production"
+        },
+        {
+          "id": 3,
+          "value": "CIT"
+        },
+        {
+          "id": 4,
+          "value": "Purchasing"
+        }
+      ],
+      "agreedToBeFound": false,
+      "differentDepartmentOnly": true,
+      "weeklySignup": false
+    },
+    {
+      "name": "Jane only others",
+      "mail": "mail@mail.com",
+      "department": "Production",
+      "departmentPool": [
+        {
+          "id": 1,
+          "value": "Marketing"
+        },
+        {
+          "id": 2,
+          "value": "Production"
+        },
+        {
+          "id": 3,
+          "value": "CIT"
+        },
+        {
+          "id": 4,
+          "value": "Purchasing"
+        }
+      ],
+      "agreedToBeFound": false,
+      "differentDepartmentOnly": true,
+      "weeklySignup": false
+    },
+    {
+      "name": "Jane also own department",
+      "mail": "mail@mail.com",
+      "department": "Production",
       "departmentPool": [
         {
           "id": 1,
@@ -24,7 +76,33 @@
       ],
       "agreedToBeFound": false,
       "differentDepartmentOnly": false,
-      "weeklySignup": true
+      "weeklySignup": false
+    },
+    {
+      "name": "Jane also own department",
+      "mail": "mail@mail.com",
+      "department": "Marketing",
+      "departmentPool": [
+        {
+          "id": 1,
+          "value": "Marketing"
+        },
+        {
+          "id": 2,
+          "value": "Production"
+        },
+        {
+          "id": 3,
+          "value": "CIT"
+        },
+        {
+          "id": 4,
+          "value": "Purchasing"
+        }
+      ],
+      "agreedToBeFound": false,
+      "differentDepartmentOnly": false,
+      "weeklySignup": false
     }
   ]
 }

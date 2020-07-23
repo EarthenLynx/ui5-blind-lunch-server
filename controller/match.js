@@ -2,6 +2,7 @@
  *      initials: "JD",
         name: "... anyone yet?",
         mail: "",
+        department: "",
         color: "Random",
  */
 
@@ -18,23 +19,23 @@ const HANDLE_MATCH = (req, res, next) => {
 
   let partners = db.get("partner").value();
 
-  const onlyOtherDepartments = partners.filter((el) => {
-    if (el.differentDepartmentOnly) {
-      if (el.differentDepartmentOnly && el.department !== reqDepartment) {
-        return el;
-      }
+  let diffPartners = [];
+
+  partners.forEach((el) => {
+    if (el.differentDepartmentOnly && el.department === reqDepartment) {
+      return;
     } else {
-      return el;
+      diffPartners.push(el);
     }
   });
+  const randomNumber = random.int((min = 0), (max = diffPartners.length - 1));
 
-  const randomNumber = random.int((min = 0), (max = onlyOtherDepartments.length - 1));
-
-  const randomPartner = onlyOtherDepartments[randomNumber];
+  const randomPartner = diffPartners[randomNumber];
 
   const payload = {
     name: randomPartner.name,
     mail: randomPartner.mail,
+    department: randomPartner.department,
   };
 
   res.send(payload);
