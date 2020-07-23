@@ -1,4 +1,5 @@
 const express = require("express");
+const cleardb = require("./controller/resetLowdb");
 
 // Define the vars for the app
 const app = express();
@@ -7,6 +8,9 @@ const PORT = process.env.PORT || 3000;
 // Initialize the middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// Initialize the daily job to reset DB
+cleardb();
 
 // Import the necessary routes
 const signupRoute = require("./routes/api/signup");

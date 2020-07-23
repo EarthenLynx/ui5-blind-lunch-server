@@ -1,5 +1,7 @@
 /**
- *      initials: "JD",
+ * @model lunchUserMatch
+ * 
+ *      initials: "JD", // Not considered
         name: "... anyone yet?",
         mail: "",
         department: "",
@@ -8,11 +10,10 @@
 
 const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
+const random = require("random");
 
 const adapter = new FileSync("./store/db.json");
 const db = low(adapter);
-
-const random = require("random");
 
 const HANDLE_MATCH = (req, res, next) => {
   const reqDepartment = req.body.department;
@@ -20,7 +21,6 @@ const HANDLE_MATCH = (req, res, next) => {
   let partners = db.get("partner").value();
 
   let diffPartners = [];
-
   partners.forEach((el) => {
     if (el.differentDepartmentOnly && el.department === reqDepartment) {
       return;
@@ -28,6 +28,7 @@ const HANDLE_MATCH = (req, res, next) => {
       diffPartners.push(el);
     }
   });
+
   const randomNumber = random.int((min = 0), (max = diffPartners.length - 1));
 
   const randomPartner = diffPartners[randomNumber];
