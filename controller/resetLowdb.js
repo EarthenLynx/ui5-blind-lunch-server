@@ -1,3 +1,4 @@
+// TODO: Show this
 const CronJob = require("cron").CronJob;
 
 // Define vars for database

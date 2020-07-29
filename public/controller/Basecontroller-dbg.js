@@ -13,11 +13,11 @@ sap.ui.define(
       onInit: function () {},
 
       _getHostname(dev) {
-        if (dev) {
-          return "http://localhost:3000";
-        } else {
-          return "http://localhost:3000";
-        }
+        // if (dev) {
+        return "http://localhost:3000";
+        // } else {
+        //   return "";
+        // }
       },
 
       _handleCreateMessageStrip(text, type, oId) {

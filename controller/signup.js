@@ -31,15 +31,19 @@ const FileSync = require("lowdb/adapters/FileSync");
 const adapter = new FileSync("./store/db.json");
 const db = low(adapter);
 
+// TODO: Show this
+const { jEncrypt } = require("./jEncrypt");
+
 const HANDLE_SIGNUP = (req, res, next) => {
   db.defaults({ partner: [] }).write();
 
-  const singlePartner = req.body;
+  const singlePartner = JSON.stringify(req.body);
 
-  db.get("partner").push(singlePartner).write();
-
-  console.log(req.body);
-  res.status(200).send({ msg: "You've been added to the DB!" });
+  // TODO: Show this. Before partners are saved, they are encrypted.
+  jEncrypt("passwort", singlePartner, (save) => {
+    db.get("partner").push(save).write();
+    res.status(200).send({ msg: "You've been added to the DB!" });
+  });
 };
 
 module.exports = HANDLE_SIGNUP;

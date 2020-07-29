@@ -1,30 +1,6 @@
 {
   "partner": [
-    {
-      "name": "Test",
-      "mail": "Test@test.de",
-      "department": "Production",
-      "departmentPool": [
-        {
-          "id": 1,
-          "value": "Marketing"
-        },
-        {
-          "id": 2,
-          "value": "Production"
-        },
-        {
-          "id": 3,
-          "value": "CIT"
-        },
-        {
-          "id": 4,
-          "value": "Purchasing"
-        }
-      ],
-      "agreedToBeFound": false,
-      "differentDepartmentOnly": true,
-      "weeklySignup": false
-    }
+    "dc4a4acd76e3e18d05fc46e55dafa9b0530868790ef34cef129ead392f2c3105830be82ffa898e7e2b96e5828469b2eb23e9510ac5c398be37411fb29eafc1bf1c083e60ccd61b347e746445aa3078f6c691f11a21ab7ce79fee73cc1f82c0339af1ed9104d4d99d6b4ba39aa2dde7ec6ba70d1267942722c6d3f3421513e015db064cff94756a48fb7d05a453e4b2eb736cb49acf5cc7369a674beb1738a5a017e803b0ed71107cbcf110d9ce718c6700ad34fa216845feeb197d6b61d36be997b1c9160ce4d49c9af21885126b36c2016ee98045578753a8f4143c7af866e1585ed762944e1c0cd7c951518aec2f1290374a09f2c75c4b93609facbcbc12a60338684e1a290c89bc0293d2f4d88be9",
+    "ff9a2d2a7146a548b48333f9a1d9f951b77bbf5d33103a70477171c985ad210ac3d576acff3f32ba4c4444409cf299e229e30889c19c186b7061ca8868e7a72f6ddba8346b8a6596f2dcd200461968619304ae81bd0e15908017f69bc9cd6d5ed62185800d5f75811d62584ebc32d79e34f617abd28e6bc285b43ca6e2ad42b1d1261b92f26cd6c4c00b1c830df70f4cb94af177d518b40ee3db9a745ebc845e3fc8259fc066857fa894867bcb7d90077cfdfb8bfd390d6098c2959e0132261cbb4422906d08002139ca0f0c4ba027be4cf3e0db65fd21d72e6c02d944e0aaf1431ab945b274388b1d4d69f814fb666e1485b61eba90dce979dae1fa9ef61daf791583141030c998c04dbbe8471fec83"
   ]
 }
